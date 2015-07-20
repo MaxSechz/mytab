@@ -141,9 +141,8 @@ nav a:hover {
   padding-top: 40px;
   top: 50%;
   left: 50%;
-  margin-left: -500px;
-  margin-top: -285px;
-  width: 1000px;
+  transform: translate(-50%, -50%);
+  width: 1500px;
   text-align: center;
   z-index: 2;
 }
@@ -229,7 +228,7 @@ nav a:hover {
 main {
   margin: auto;
   padding: 35px 0 0 0;
-  max-width: 1000px;
+  max-width: 1200px;
   text-align: left;
 }
 
