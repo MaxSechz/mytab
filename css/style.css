@@ -1,5 +1,5 @@
 html, body, div, h1, h2, section, ul,
-li, a, form, label, input, button, img, strong,
+li, a, form, label, button, img, strong,
 header, footer, main, nav, p, strong, em {
   margin: 0;
   padding: 0;
@@ -92,14 +92,19 @@ header .weather-right {
 
 .logo {
   display: inline-block;
-}
-
-.logo a {
-  display: block;
   padding: 15px;
   font-weight: 400;
   font-size: 25px;
   color: #fff;
+}
+
+#local-input {
+  font: inherit;
+  width: 100px;
+  background: inherit;
+  color: inherit;
+  border: 0;
+  outline: 0;
 }
 
 nav a {
@@ -228,7 +233,7 @@ nav a:hover {
 main {
   margin: auto;
   padding: 35px 0 0 0;
-  max-width: 1200px;
+  max-width: 1250px;
   text-align: left;
 }
 
@@ -294,6 +299,26 @@ section li a:hover {
 
 .has-desks #desks {
   display: block;
+}
+
+.search-link::after {
+  content: '▶';
+}
+
+.search-link {
+  transition: transform 1s;
+}
+.search-link:hover {
+  transform: rotateZ(360deg);
+}
+
+#search {
+  display: block;
+  margin: auto;
+  width: 25%;
+  height: 20px;
+  padding: 5px;
+  text-align: center;
 }
 
 #desks {

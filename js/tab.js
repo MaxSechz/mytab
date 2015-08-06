@@ -98,7 +98,43 @@ $(document).ready(function(){
       });
     }
   };
+  var currentSearch;
+  var setupSearches = function () {
+      var searches = {
+          "#ruby-search": "http://ruby-doc.com/search.html?q=",
+          "#javascript-search": "https://developer.mozilla.org/en-US/search?topic=js&q=",
+          "#markup-search": "https://developer.mozilla.org/en-US/search?topic=api&topic=css&topic=html&q=",
+          "#ruby-eco-search": "https://rubygems.org/search?utf8=%E2%9C%93&query=",
+          "#javascript-eco-search": "https://www.npmjs.com/search?q="
+      };
+      Object.keys(searches).forEach(function (id, index, searchesIds) {
+          $(id).on('click', function () {
+              $('#search').focus();
+              currentSearch = searches[id];
+          });
+      });
+  };
 
+  var setupSearch = function () {
+      setupSearches();
+      $('#search').on('keydown', function (e) {
+           if (e.keyCode === 13) {
+               window.location = currentSearch + $(e.currentTarget).val();
+           }
+       });
+  };
+
+  var setupLocalHost = function () {
+      var localInput = $('#local-input');
+
+      $('#local-link').click(function (e) {
+          e.preventDefault();
+          window.open('http://localhost:' + localInput.val());
+      });
+  };
+
+  setupLocalHost();
+  setupSearch();
   Clock();
   Weather();
 });
