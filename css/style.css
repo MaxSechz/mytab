@@ -147,7 +147,7 @@ nav a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 1500px;
+  width: 1600px;
   text-align: center;
   z-index: 2;
 }
@@ -190,7 +190,7 @@ nav a:hover {
 
 #clock {
   padding: 0 0 15px 0;
-  font-size: 160px;
+  font-size: 130px;
   text-align: center;
 }
 
@@ -233,7 +233,6 @@ nav a:hover {
 main {
   margin: auto;
   padding: 35px 0 0 0;
-  max-width: 1250px;
   text-align: left;
 }
 

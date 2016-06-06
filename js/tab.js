@@ -136,5 +136,5 @@ $(document).ready(function(){
   setupLocalHost();
   setupSearch();
   Clock();
-  Weather();
+  // Weather(); Need key
 });
